@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h1>Login</h1>
+        <form action = "/cadastro/usuario/salvar" method="POST">
+            <label>Nome:</label><br />
+            <input name="nome" type="text"/><br />
+            <label>Senha:</label>
+            <input name="senha" type="password"><br />
+            <input type="submit" type="Entrar"/>
+        </form>
+
+        <% if(mensagemLogin){ %>
+            <p>
+                <label style="color: red"><%=mensagemLogin %></label>
+            </p>
+        }
+        <%}%>
+
+    </body>
+</html>
