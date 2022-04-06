@@ -15,4 +15,11 @@ async function selectUsuario(){
     return rows;
 }
 
-module.exports = {selectUsuario}
+async function insertUsuario(){
+    const conn = await connect();
+    const sql = 'INSERT INTO usuario (nome,senha) VALUES (?,?);';
+    const values = [usuario.nome, usuario.senha];
+    return await conn.query(sql,values);
+}
+
+module.exports = {selectUsuario, insertUsuario, deleteUsuario}
