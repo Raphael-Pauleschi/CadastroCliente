@@ -22,4 +22,4 @@ async function insertUsuario(){
     return await conn.query(sql,values);
 }
 
-module.exports = {selectUsuario, insertUsuario, deleteUsuario}
+module.exports = {selectUsuario, insertUsuario}

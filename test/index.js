@@ -1,6 +1,6 @@
-(async => {
-const db = require .db;
+(async =>{
+const db = require("./db");
 console.log('SELECT * FROM usuario');
-const usuarios = await db.selectUsuario();
+const usuarios =  db.selectUsuario;
 console.log(usuarios);
 })();
