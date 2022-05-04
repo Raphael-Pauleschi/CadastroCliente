@@ -1,6 +1,6 @@
 const seguranca = require('../../model/components/seguranca');
-const usuarioBanco = require('../..model/repositories/usuarioDB');
-modeule.exports = function(app){
+const usuarioBanco = require('../../model/repositories/UsuarioDB');
+module.exports = function(app){
 
     app.get('/cadastro',function(req,res){
         if(req.query.fail)
