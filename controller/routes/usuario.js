@@ -1,4 +1,4 @@
-const seguranca = require('../../model/componenets/seguranca');
+const seguranca = require('../../model/components/seguranca');
 const usuarioBanco = require('../..model/repositories/usuarioDB');
 modeule.exports = function(app){
 
