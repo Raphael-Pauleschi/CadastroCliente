@@ -1,4 +1,4 @@
-const usuarioDB = require('.db.js');
+const usuarioDB = require('./db.js')
 
 async function selectUsuario(){
     const conn = await usuarioDB.connect();
