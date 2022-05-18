@@ -41,7 +41,7 @@ module.exports = function(app){
             next(err);
         }
     });
-    app.get('delete/usuario/id',seguranca.autenticar, async(req,res,next)=>{
+    app.get('delete/usuario/:id',seguranca.autenticar, async(req,res,next)=>{
         try{
             var id = req.params.id;
             await usuarioBanco.deleteUsuario(id);
@@ -51,4 +51,20 @@ module.exports = function(app){
             next(err);
         }
     });
+    app.get('/edit/usuario/:id', seguranca.autenticar, async (req, res, next) => {
+        try{
+            var id = req.params.id;
+            const usuario = await usuarioBanco.getUsuarioId(id);
+            res.render('usuario/EditUsuario', { mensagem: '', usuario });
+        } catch (err){
+            next(err);
+        }
+    });
+
+   
+    app.get('/login', function (req, res) {
+        if(req.query.fail) res.render('usuario/Login', { mensagemLogin: 'Usúario e/ou senha incorretos!'});
+        else res.render('usuario/Login', { mensagemLogin: null});
+    });
+
 }

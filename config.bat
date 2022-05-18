@@ -5,3 +5,4 @@ npm i sql2
 npm install body-parser
 npm install consign
 npm install ejs
+npm install passport
